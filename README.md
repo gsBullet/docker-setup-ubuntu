@@ -124,4 +124,67 @@ Enable Virtualization:
 
     *Set Intel VT-x or AMD-V to Enabled.
     *Save and Exit:
+# 2. Install and Configure KVM
+After enabling virtualization, install and configure KVM:
+
+Install Required Packages:
+
+    sudo apt update
+    sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+
+Verify KVM Installation: Run:
+
+    sudo kvm-ok
+
+Restart Docker Desktop
+
+    systemctl --user restart docker-desktop
+    docker-desktop
+
+*docker-desktop
+*docker-desktop: command not found
+
+Verify if Docker Desktop is installed:
+
+    dpkg -l | grep docker-desktop
+    
+if some wrong like
+
+    *sudo find / -name docker-desktop 2>/dev/null
+    *[sudo] password for devops: 
+    */opt/docker-desktop
+    */opt/docker-desktop/bin/docker-desktop
+    */usr/lib/docker/cli-plugins/docker-desktop
+
+
+
+Create a Symlink to Make docker-desktop Accessible Run the following command to add the binary to a directory in your $PATH:
+
+    sudo ln -s /opt/docker-desktop/bin/docker-desktop /usr/local/bin/docker-desktop
+
+then
+
+    docker-desktop
+
+if any wrong enable 
+
+    systemctl --user enable docker-desktop
+ now 
+ 
+     docker run hello-world
+
+
+Excellent! 🎉 The message indicates that Docker Desktop is running successfully under systemd. Everything seems to be working as expected now.
+
+
+
+
+
+
+
+
+
+
+
+
 
