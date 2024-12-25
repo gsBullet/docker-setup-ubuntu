@@ -41,7 +41,31 @@
 # 2. Alternatively, visit the Docker Desktop for Linux page to get the latest version link.
 
 
+# 3. Install the Docker Desktop .deb Package
 
+    sudo apt install ./docker-desktop.deb
+
+# 4. Configure Docker Desktop
+    systemctl --user start docker-desktop
+    systemctl --user enable docker-desktop
+    
+
+# 5. Launch Docker Desktop
+    docker-desktop
+
+# 6. Verify Installation
+    docker version
+# 7. Verify Installation
+    docker info
+# 8. Troubleshooting
+If Docker Desktop does not launch, check the logs:
+
+    journalctl --user -u docker-desktop.service
+
+curl -fsSL https://download.docker.com/linux/desktop/debian/dists/bullseye/pool/main/docker-desktop-latest_amd64.deb -o docker-desktop.deb 
+curl: (22) The requested URL returned error: 404
+curl -fsSL https://desktop.docker.com/linux/main/amd64/docker-desktop.deb -o docker-desktop.deb
+curl: (22) The requested URL returned error: 403
 
 
 
