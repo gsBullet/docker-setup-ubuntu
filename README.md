@@ -33,5 +33,16 @@
 
 <h1 class="text-center">To install Docker Desktop on Ubuntu, follow these steps:</h1>
 
+# 1. Install Prerequisites
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt install -y curl wget apt-transport-https software-properties-common ca-certificates
+
+# 2. Alternatively, visit the Docker Desktop for Linux page to get the latest version link.
+
+
+
+
+
 
 
