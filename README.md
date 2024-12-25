@@ -25,6 +25,13 @@
     sudo apt update
     sudo apt install -y docker-ce docker-ce-cli containerd.io
 
-# sudo docker --version
+# 7 sudo docker --version
     sudo docker --version
+
+# Verify by running:
+    docker run hello-world
+
+<h1 class="text-center">To install Docker Desktop on Ubuntu, follow these steps:</h1>
+
+
 
